@@ -2,7 +2,7 @@ using CairoMakie
 
 # Choose the data to plot (regime_MST or regime_MFET)
 data = regime_MST
-file_name = "regime_MST"
+file_name = "./Plots/regime_MST"
 
 # Prepare data for plotting
 function build_results_for_plot(r)	
