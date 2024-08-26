@@ -2,7 +2,7 @@ using CairoMakie
 
 # Choose the data to plot (regime_MST or regime_MFET)
 data = regime_MST
-file_name = "./Plots/regime_MST"
+file_name = "regime_MST"
 
 # Prepare data for plotting
 function build_results_for_plot(r)	
@@ -16,7 +16,7 @@ function build_results_for_plot(r)
 		copy_r[i] = 5
 	end
 	indices = findall(x -> x == 5, r[:,:])
-	for i indices in
+	for i in indices
 		copy_r[i] = 2
 	end
 	indices = findall(x -> x == 6, r[:,:])
@@ -66,6 +66,6 @@ function create_heatmap(regime)
 end
 # Generate, save and display the figure
 fig = create_heatmap(data)
-save(string(file_name,".png"),fig)
+save(string("./Plots/",file_name,".png"),fig)
 fig
 
